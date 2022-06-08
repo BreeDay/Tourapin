@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "Tourapin": {
+      "main": "src/Tourapin/main.mo",
+      "type": "motoko"
+    },
+    "Tourapin_assets": {
+      "dependencies": [
+        "Tourapin"
+      ],
+      "frontend": {
+        "entrypoint": "src/Tourapin_assets/src/index.html"
+      },
+      "source": [
+        "src/Tourapin_assets/assets",
+        "dist/Tourapin_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.3",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
