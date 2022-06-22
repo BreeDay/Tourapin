@@ -10,13 +10,654 @@
   </head>
   <body>
     <main>
-      <img src="logo.png" alt="DFINITY logo" />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
+      <section class="map top">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d237593.7816163159!2d-157.90966044531243!3d21.491935569882592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1654724881466!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      </section>
     </main>
   </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/Tourapin_trans.png" />
+  <title>Tourapin | Virtual Tour Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page hidden">
+<header>
+<div class="header-2">
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="#arrival">Top Guides</a></li>
+            <li><a href="#featured">Featured Guide</a></li>
+            <li><a href="#gallery">All Guides</a></li>
+            <li><a href="#deal">Free Guides</a></li>
+        </ul>
+    </nav>
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a onClick="viewWallet()" class="fas fa-user"></a>
+    </div>
+</div>
+</header>
+<section class="home" id="home">
+<div class="home-slider owl-carousel">
+  <div class="item">
+        <img src="img/kauai.jpg" alt="">
+        <div class="content">
+            <h3>Locals Guide to Paradise</h3>
+            <p>Get a guide of the best attractions put together by locals.</p>
+            <a href="#arrival"><button class="btn">discover</button></a>
+        </div>
+    </div>
+    <div class="item">
+        <img src="img/kokohead.jpg" alt="">
+        <div class="content">
+            <h3>Newest developments</h3>
+            <p>Find out about the newest attractions for your vacation.</p>
+            <a href="#arrival"><button class="btn">discover</button></a>
+        </div>
+    </div>
+    <div class="item">
+        <img src="img/diamondhead.jpg" alt="">
+        <div class="content">
+            <h3>budget activities</h3>
+            <p>Have the adventure of a lifetime without breaking the bank.</p>
+            <a href="#arrival"><button class="btn">discover</button></a>
+        </div>
+    </div>
+    <div class="item">
+        <img src="img/oside.jpg" alt="">
+        <div class="content">
+            <h3>Best Eats</h3>
+            <p>Experience paradise via the unique dishes.</p>
+            <a href="#arrival"><button class="btn">discover</button></a>
+        </div>
+    </div>
+</div>
+</section>
+<section class="location" id="location">
+    <div class="form-container">
+       <br>
+        <form action="">
+            <p>Vacation Destination:
+            <input type="search" placeholder="Oahu, Hawaii" id="search" /> 
+            <label for="search" class="fas fa-search"></label></p>
+        </form>
+        <div class="oahu">Only Oahu, Hawaii is available at this time.</div>
+    </div>
+</section>
+<section class="arrival" id="arrival">
+<h1 class="heading"> <span>Top Guides</span> </h1>
+<div class="box-container">
+    <div class="box">
+        <div class="image">
+            <img src="img/tom.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Tom Petersen</h3>
+            <div class="subInfo">
+                <strong class="price"> 10 ICP <span>15 ICP</span> </strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+            <a href="#" style="--i:1;" class="fas fa-heart"></a>
+            <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+            <a onClick="viewGuide(1)" href="#viewMore" style="--i:3;" class="fas fa-eye"></a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="image">
+            <img src="img/oscar.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Oscar Johnson</h3>
+            <div class="subInfo">
+                <strong style="font-size:2rem;">10 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+            <a href="#" style="--i:1;" class="fas fa-heart"></a>
+            <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+            <a onClick="viewGuide(2)" href="#viewMore" style="--i:3;" class="fas fa-eye"></a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="image">
+            <img src="img/cara.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Cara Delinge</h3>
+            <div class="subInfo">
+                <strong class="price"> 8 ICP <span>10 ICP</span> </strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+            <a href="#" style="--i:1;" class="fas fa-heart"></a>
+            <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+            <a onClick="viewGuide(3)" href="#viewMore" style="--i:3;" class="fas fa-eye"></a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="image">
+            <img src="img/michelle.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Michelle Toussaint</h3>
+            <div class="subInfo">
+                <strong style="font-size:2rem;">9 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+            <a href="#" style="--i:1;" class="fas fa-heart"></a>
+            <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+            <a onClick="viewGuide(4)" href="#viewMore" style="--i:3;" class="fas fa-eye"></a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="image">
+            <img src="img/leah.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Leah Moore</h3>
+            <div class="subInfo">
+                <strong class="price">FREE </strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+            <a href="#" style="--i:1;" class="fas fa-heart"></a>
+            <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+            <a onClick="viewGuide(5)" href="#viewMore" style="--i:3;" class="fas fa-eye"></a>
+        </div>
+    </div>
+    <div class="box">
+        <div class="image">
+            <img src="img/sterling.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Sterling Thomas</h3>
+            <div class="subInfo">
+                <strong style="font-size:2rem;">8 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+            <a href="#" style="--i:1;" class="fas fa-heart"></a>
+            <a href="#" style="--i:2;" class="fas fa-shopping-cart"></a>
+            <a onClick="viewGuide(6)" href="#viewMore" style="--i:3;" class="fas fa-eye"></a>
+        </div>
+    </div>
+</div>
+</section>
+<section class="viewMore hidden" id="viewMore">
+    <br><br><br>
+<h3 class="guideName"></h3>
+<div class="photo">
+</div>
+<div class="offer">
+    <p><b>Bio:</b> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus repudiandae necessitatibus error assumenda laboriosam, soluta nihil rerum rem aliquam, officiis tempore ad architecto harum ipsa quaerat? Provident optio voluptate labore?</p>
+</div>
+<div class="ystars">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <b>5/5</b>
+</div>
+<div class="vbuy"></div>
+<div class="vprice"> <span>ICP</span></div>
+<div class="map">
+    <img class="oahuPin" src="img/oahu.jpg" alt="">
+</div>
+</section>
+<section class="feature" id="featured">
+<h1 class="heading"> <span> featured guides </span> </h1>
+<div class="row">
+    <div class="image-container">
+        <div class="big-image">
+            <img src="img/amy.jpg" alt="">
+        </div>
+        <div class="small-image">
+            <img class="image-active" src="img/amy.jpg" alt="">
+            <img src="img/amy-surf.jpg" alt="">
+            <img src="img/waikiki.jpg" alt="">
+            <img src="img/icecream.jpg" alt="">
+        </div>
+    </div>
+    <div class="content">
+        <h3>Amy Tseng</h3>
+        <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>(200+) reviews</span>
+        </div>
+        <p>Hi, I am Amy and I have lived on the island of Oahu for 6 years! I am excited to share my favorite places with you!</p>
+        <strong class="price">10 ICP <span>15 ICP</span> </strong>
+        <a href="#"><button class="btn">buy now</button></a>
+    </div>
+</div>
+</section>
+<section class="gallery" id="gallery">
+<h1 class="heading"> <span> all guides </span> </h1>
+<ul class="controls">
+    <li class="btn button-active" data-filter="all">all</li>
+    <li class="btn" data-filter="phone">Outdoor</li>
+    <li class="btn" data-filter="laptop">indoor</li>
+    <li class="btn" data-filter="headphone">Budget</li>
+    <li class="btn" data-filter="shoes">kid friendly</li>
+</ul>
+<div class="image-container">
+    <div class="box phone">
+        <div class="image">
+            <img src="img/oscar.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Oscar Johnson</h3>
+            <div class="subInfo">
+                <strong class="price">10 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box phone">
+        <div class="image">
+            <img src="img/sterling.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Sterling Thomas</h3>
+            <div class="subInfo">
+                <strong class="price">8 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box laptop">
+        <div class="image">
+            <img src="img/amy.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Amy Tseng</h3>
+            <div class="subInfo">
+                <strong class="price">10 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box shoes">
+        <div class="image">
+            <img src="img/andrea.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Andrea Michaels</h3>
+            <div class="subInfo">
+                <strong class="price">10 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box laptop">
+        <div class="image">
+            <img src="img/tom.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Tom Petersen</h3>
+            <div class="subInfo">
+                <strong class="price">10 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box headphone">
+        <div class="image">
+            <img src="img/cara.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Cara Delinge </h3>
+            <div class="subInfo">
+                <strong class="price">8 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <div class="box shoes">
+        <div class="image">
+            <img src="img/michelle.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Michelle Toussaint</h3>
+            <div class="subInfo">
+                <strong class="price">9 ICP</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="box headphone">
+        <div class="image">
+            <img src="img/leah.jpg" alt="">
+        </div>
+        <div class="info">
+            <h3>Leah Moore</h3>
+            <div class="subInfo">
+                <strong class="price">Free</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="box headphone" style="width: 100px; height: 100%;">
+        <div class="image">
+            <img src="img/sean.jpg" alt="">
+        </div>
+        <div class="info" style="width: 300px; height: 100%;">
+            <h3>Sean Lasseter</h3>
+            <div class="subInfo">
+                <strong class="price">Free</strong>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half"></i>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+</section>
+<section class="deal" id="deal">
+<h1 class="heading"> <span> free guides </span> </h1>
+<div class="box-container">
+    <div class="box">
+        <img src="img/leah.jpg" alt="">
+        <div class="content">
+            <h3>Leah Moore</h3>
+            <p>Try my free experience!</p>
+            <a href="#"><button class="btn">explore</button></a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="img/sean.jpg" alt="">
+        <div class="content">
+            <h3>Sean Lasseter</h3>
+            <p>Traveling on a budget? Get my guide to Oahu for FREE!</p>
+            <a href="#"><button class="btn">explore</button></a>
+        </div>
+    </div>
+</div>
+</section>
+<section class="footer">
+        <div class=" top" style="align-items: center; background-color: black;">
+    <br><br>
+          <div class="box" style="text-align: center; align-items: center; color: white;">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>2022 Supernova Street, Honolulu HI 96815</li>
+              <li><i class="far fa-envelope"></i>contact@tourapin.com </li>
+              <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+              <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+              <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
+            </ul>
+          </div>
+          <br><br>
+        </div>
+</section>
+</div>
+<div class="copage hidden">
+    <header>
+    <div class="header-2">
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" onClick="goBack()">Back</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#" class="fas fa-user fa-2x"></a>
+        </div>
+    </div>
+</header>
+<div class="user">
+    <i class="fas fa-user"></i>
+    <div class="userInfo">
+            <p><b>Name:</b> John Demo</p>
+            <p><b>Wallet:</b>93hfsdjg27y834usdf3847odi93874</p>
+            <p><b>Balance:</b> 32 ICP</p>
+    </div>
+    <div class="guideMore">
+
+    </div>
+    
+</div>
+</div>
+<header>
+    <div class="header-2 hidden">
+        <div id="menu" class="fas fa-bars"></div>
+        <nav class="navbar">
+            <ul>
+                <li><a class="active" onClick="goBack()">Back</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#" class="fas fa-user fa-2x"></a>
+        </div>
+    </div>
+</header>
+<div class="bought hidden">
+    <div class="img"></div>
+    <div class="name"></div>
+    <div class="map2"><img class="map2" src="img/oahu.jpg" alt=""></div>
+    <p></p>
+    <div class="guideImg"></div>
+    <p><b>About:</b> ipsum dolor sit amet consectetur adipisicing elit. Repudiandae neque tempora tempore eveniet facere blanditiis autem nam error in veritatis ipsam iusto at illo, quas hic praesentium cum quasi voluptate.</p>
+    <img src="img/eats1.jpg" alt="">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="index.js"></script>
+<script>
+    const viewMore = document.querySelector(".viewMore");
+    const guideDiv = document.querySelector(".arrival");
+    const guideName = document.querySelector(".guideName");
+    const price = document.querySelector(".vprice");
+    const buy = document.querySelector(".vbuy");
+    const photo = document.querySelector(".photo");
+    const page = document.querySelector(".page");
+    const copage = document.querySelector(".copage");
+    const guideMore = document.querySelector(".guideMore");
+    var name = "";
+    var pin = "";
+    var image = "";
+    var cost = "";
+
+    function viewGuide(id){
+        switch (id) {
+            case 1:
+                name = "Tom Petersen";
+                image = "img/tom.jpg";
+                cost = 10;
+                break;
+            case 2:
+                name = "Oscar Johnson";
+                image = "img/oscar.jpg";
+                cost = 10;
+                break;
+            case 3:
+                name = "Cara Delinge";
+                image = "img/cara.jpg";
+                cost = 8;
+                break;
+            case 4:
+                name = "Michelle Toussaint";
+                image = "img/michelle.jpg";
+                cost = 9;
+                break;
+            case 5:
+                name = "Leah Moore";
+                image = "img/leah.jpg";
+                cost = 0;
+                break;
+            case 6:
+                name = "Sterling Thomas";
+                image = "img/sterling.jpg";
+                cost = 8;
+                break;       
+        }
+        price.innerHTML= `<span>${cost} ICP</span>`;
+        buy.innerHTML = `<button class="purchase" onclick="buyGuide(${id})"> Purchase ${name}'s tour now! </button>`
+        guideName.innerHTML = `<h1>${name}</h1>`;
+        photo.innerHTML = `<img src="${image}">`;
+        viewMore.classList.remove("hidden");
+        // guideDiv.classList.add("hidden");
+    }
+    function buyGuide(id){
+        page.classList.add("hidden");
+        copage.classList.remove("hidden");
+        switch (id) {
+            case 1:
+                name = "Tom Petersen";
+                image = "img/tom.jpg";
+                cost = 10;
+                break;
+            case 2:
+                name = "Oscar Johnson";
+                image = "img/oscar.jpg";
+                cost = 10;
+                break;
+            case 3:
+                name = "Cara Delinge";
+                image = "img/cara.jpg";
+                cost = 8;
+                break;
+            case 4:
+                name = "Michelle Toussaint";
+                image = "img/michelle.jpg";
+                cost = 9;
+                break;
+            case 5:
+                name = "Leah Moore";
+                image = "img/leah.jpg";
+                cost = 0;
+                break;
+            case 6:
+                name = "Sterling Thomas";
+                image = "img/sterling.jpg";
+                cost = 8;
+                break;       
+        }
+        // guideMore.innerHTML= `<span>${cost} ICP</span>`;
+        // buy.innerHTML = `<button class="purchase" onclick="buyGuide(${id})"> Purchase ${name}'s tour now! </button>`
+        // guideName.innerHTML = `<h1>${name}</h1>`;
+        // photo.innerHTML = `<img src="${image}">`;
+    }
+    
+    function viewWallet(){
+        page.classList.add("hidden");
+        copage.classList.remove("hidden");
+    }
+    function goBack(){
+        page.classList.remove("hidden");
+        copage.classList.add("hidden");
+    }
+
+</script>
+</body>
 </html>
